@@ -50,9 +50,6 @@ accuracy = accuracy_score(y_test, predictions)
 
 print("Model Accuracy:", accuracy)
 # Save trained model
-joblib.dump(
-    model,
-    r"C:\Users\Rohan\Desktop\Main EL\Datasets\model.pkl"
-)
+joblib.dump(model, "model.pkl")
 
 print("Model saved successfully!")

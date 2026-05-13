@@ -6,9 +6,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load ML model
-model = joblib.load(
-    r"C:\Users\Rohan\Desktop\Main EL\Datasets\model.pkl"
-)
+model = joblib.load("model.pkl")
 
 @app.route("/")
 def home():
