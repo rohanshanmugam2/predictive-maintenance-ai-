@@ -1,12 +1,14 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 import joblib
 import pandas as pd
 import numpy as np
 
 app = Flask(__name__)
+CORS(app)
 
 # Load ML model
-model = joblib.load("model.pkl")
+data = pd.read_csv("features.csv")
 
 @app.route("/")
 def home():
